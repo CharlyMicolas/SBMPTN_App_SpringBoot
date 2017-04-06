@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>View All Students</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<link rel="stylesheet" th:href="@{/main.css}"/>
+       
+    </head>
+    <body>
+        <h1>All Students</h1>
+        
+        <table>
+	        <thead>
+	     		<tr>
+	        		<th>No.</th>
+	        		<th>NPM</th>
+	        		<th>Name</th>
+	        		<th>GPA</th>
+	        	</tr>
+	     	</thead>
+	        <tbody>
+	        	<tr th:each="student,iterationStatus: ${students}">
+		            <td th:text="${iterationStatus.count}"></td>
+			       	<td th:text="${student.npm}"></td>
+			       	<td th:text="${student.name}"></td>
+			       	<td>
+			       		<span th:text="${student.gpa}"></span>
+			       		<span class="warn" th:text="(${student.gpa} &lt; 2) ? 'Mahasiswa dalam probation'"></span>
+			       	</td>
+		       	</tr>
+	        </tbody>
+        </table>
+    </body>
+</html>
