@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 
 import com.example.dao.ProdiMapper;
+import com.example.model.PesertaModel;
 import com.example.model.ProdiModel;
 
 import lombok.extern.slf4j.Slf4j;
@@ -55,5 +56,21 @@ public class ProdiServiceDatabase implements ProdiService {
 		prodiMapper.updateProdi(prodi);
 		
 	}
+	
+	@Override
+	public PesertaModel selectPesertaTermuda(String kode_prodi) {
+		// TODO Auto-generated method stub
+		return prodiMapper.selectPesertaTermuda(kode_prodi);
+	}
+
+	@Override
+	public PesertaModel selectPesertaTertua(String kode_prodi) {
+		// TODO Auto-generated method stub
+		return prodiMapper.selectPesertaTertua(kode_prodi);
+	}
+
+
+	
+
 
 }

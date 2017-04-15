@@ -6,14 +6,9 @@
    
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	<script> 
-		$(function(){
-		  $("#header").load("header.html");
-		});
-	</script> 
 	</head>
 	<body>
-		<div id="header">
+<div id="header">
 			<nav class="navbar navbar-inverse">
 			  <div class="container-fluid">
 			    <div class="navbar-header">
@@ -26,21 +21,6 @@
 			  </div>
 			</nav>
 		</div>
-		<div id="container">
-			<div><h1>Pengumuman SBMPTN</h1></div>
-			<form action="@" th:action="@{/pengumuman/submit}" th:object="${peserta}" method="post">
-			  <div class="form-group">
-			  	<div class="col-xs-3">
-			  		<label for="nomor">Masukkan nomor peserta Anda:</label>
-				    <input type="text" class="form-control" name="nomor" width="10px"/><br/>
-					<button type="submit" class="btn btn-success">Submit</button>
-			  	</div>
-			  </div>
-			</form>
-		</div>
-		<div id="footer"></div>
-
-		
 	</body>
 	
 

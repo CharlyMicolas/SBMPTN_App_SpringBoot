@@ -24,5 +24,8 @@ public class PesertaModel {
 	 private String nama;
 	 private Date tgl_lahir;
 	 private String kode_prodi;
+	 
+	 private UnivModel univ;
+	 private ProdiModel prodi;
 	    
 }

@@ -1,6 +1,8 @@
 package com.example.service;
 
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -54,6 +56,23 @@ public class PesertaServiceDatabase implements PesertaService
 		pesertaMapper.updatePeserta(peserta);
 		
 	}
+
+	@Override
+	public int hitungUmur(Date tgl_lahir) {
+		// TODO Auto-generated method stub
+		Date now = new Date();
+		long diff = now.getTime() - tgl_lahir.getTime();
+		int umur = (int)(TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS))/365;
+		return umur;
+	}
+
+	
+	
+	
+	
+
+
+	
 
 
 }
